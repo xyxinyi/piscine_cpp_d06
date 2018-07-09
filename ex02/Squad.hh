@@ -2,10 +2,10 @@
 // Created by Alen BADRAJAN on 7/25/17.
 //
 
-#ifndef EX02_SQUAD_HPP
-#define EX02_SQUAD_HPP
+#ifndef EX02_SQUAD_H_
+#define EX02_SQUAD_H_
 
-#include "ISquad.hpp"
+#include "ISquad.hh"
 
 class Squad : public ISquad {
 
@@ -25,4 +25,4 @@ public:
 	int push(ISpaceMarine*);
 	
 };
-#endif //EX02_SQUAD_HPP
+#endif 

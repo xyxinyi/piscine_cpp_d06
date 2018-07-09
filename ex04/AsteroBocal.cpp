@@ -1,5 +1,5 @@
-#include "AsteroBocal.hpp"
-#include "StripMiner.hpp"
+#include "AsteroBocal.hh"
+#include "StripMiner.hh"
 
 AsteroBocal::AsteroBocal()
 {

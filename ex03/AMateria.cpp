@@ -1,4 +1,4 @@
-#include "AMateria.hpp"
+#include "AMateria.hh"
 
 AMateria::AMateria(const std::string& type) :
 	_type(type),

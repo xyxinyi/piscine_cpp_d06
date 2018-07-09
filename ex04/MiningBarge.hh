@@ -1,8 +1,8 @@
-#ifndef MININGBARGE_HPP
-# define MININGBARGE_HPP
+#ifndef MININGBARGE_H_
+# define MININGBARGE_H_
 
-# include "IMiningLaser.hpp"
-# include "IAsteroid.hpp"
+# include "IMiningLaser.hh"
+# include "IAsteroid.hh"
 
 class MiningBarge
 {

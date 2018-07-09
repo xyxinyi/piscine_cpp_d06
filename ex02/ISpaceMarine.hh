@@ -2,8 +2,8 @@
 // Created by Alen BADRAJAN on 7/25/17.
 //
 
-#ifndef EX02_ISPACEMARINE_HPP
-#define EX02_ISPACEMARINE_HPP
+#ifndef EX02_ISPACEMARINE_H_
+#define EX02_ISPACEMARINE_H_
 
 #include <iostream>
 #include <string>
@@ -26,4 +26,4 @@ public:
 	
 };
 
-#endif //EX02_ISPACEMARINE_HPP
+#endif 

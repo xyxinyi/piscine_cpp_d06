@@ -1,5 +1,5 @@
-#ifndef IASTEROID_HPP
-# define IASTEROID_HPP
+#ifndef IASTEROID_H_
+# define IASTEROID_H_
 
 # include <string>
 

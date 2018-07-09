@@ -1,5 +1,5 @@
-#include "BocalSteroid.hpp"
-#include "StripMiner.hpp"
+#include "BocalSteroid.hh"
+#include "StripMiner.hh"
 
 BocalSteroid::BocalSteroid()
 {

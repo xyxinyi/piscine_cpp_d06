@@ -1,7 +1,7 @@
-#ifndef ASTEROBOCAL_HPP
-# define ASTEROBOCAL_HPP
+#ifndef ASTEROBOCAL_H_
+# define ASTEROBOCAL_H_
 
-# include "IAsteroid.hpp"
+# include "IAsteroid.hh"
 # include <string>
 
 class AsteroBocal : public IAsteroid

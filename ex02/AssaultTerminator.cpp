@@ -1,7 +1,7 @@
 //
 // Created by Alen BADRAJAN on 7/25/17.
 //
-#include "AssaultTerminator.hpp"
+#include "AssaultTerminator.hh"
 
 AssaultTerminator::AssaultTerminator()
 {

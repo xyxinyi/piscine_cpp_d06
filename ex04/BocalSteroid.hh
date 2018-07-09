@@ -1,7 +1,7 @@
-#ifndef BOCALSTEROID_HPP
-# define BOCALSTEROID_HPP
+#ifndef BOCALSTEROID_H_
+# define BOCALSTEROID_H_
 
-# include "IAsteroid.hpp"
+# include "IAsteroid.hh"
 # include <string>
 
 class BocalSteroid : public IAsteroid

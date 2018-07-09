@@ -1,4 +1,4 @@
-#include "Ice.hpp"
+#include "Ice.hh"
 #include <iostream>
 
 Ice::Ice() :

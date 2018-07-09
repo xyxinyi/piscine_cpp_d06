@@ -1,5 +1,5 @@
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
+#ifndef IMATERIASOURCE_H_
+# define IMATERIASOURCE_H_
 
 # include <string>
 

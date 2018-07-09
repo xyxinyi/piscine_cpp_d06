@@ -2,7 +2,7 @@
 // Created by Alen BADRAJAN on 7/25/17.
 //
 
-#include "TacticalMarine.hpp"
+#include "TacticalMarine.hh"
 
 TacticalMarine::TacticalMarine()
 {

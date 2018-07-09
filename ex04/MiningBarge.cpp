@@ -1,4 +1,4 @@
-#include "MiningBarge.hpp"
+#include "MiningBarge.hh"
 
 MiningBarge::MiningBarge()
 {

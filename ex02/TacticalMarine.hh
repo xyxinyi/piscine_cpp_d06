@@ -2,10 +2,10 @@
 // Created by Alen BADRAJAN on 7/25/17.
 //
 
-#ifndef EX02_TACTICALMARINE_HPP
-#define EX02_TACTICALMARINE_HPP
+#ifndef EX02_TACTICALMARINE_H_
+#define EX02_TACTICALMARINE_H_
 
-#include "ISpaceMarine.hpp"
+#include "ISpaceMarine.hh"
 
 class TacticalMarine : public ISpaceMarine {
 public:
@@ -22,4 +22,4 @@ public:
     void meleeAttack() const;
 };
 
-#endif //EX02_TACTICALMARINE_HPP
+#endif 

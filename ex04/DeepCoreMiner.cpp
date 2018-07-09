@@ -1,4 +1,4 @@
-#include "DeepCoreMiner.hpp"
+#include "DeepCoreMiner.hh"
 #include <iostream>
 
 DeepCoreMiner::DeepCoreMiner()

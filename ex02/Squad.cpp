@@ -2,7 +2,7 @@
 // Created by Alen BADRAJAN on 7/25/17.
 //
 
-#include "Squad.hpp"
+#include "Squad.hh"
 
 int     Squad::nr_atributes = 0;
 

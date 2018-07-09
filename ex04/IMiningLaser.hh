@@ -1,7 +1,7 @@
-#ifndef IMININGLASER_HPP
-# define IMININGLASER_HPP
+#ifndef IMININGLASER_H_
+# define IMININGLASER_H_
 
-# include "IAsteroid.hpp"
+# include "IAsteroid.hh"
 
 class IMiningLaser
 {

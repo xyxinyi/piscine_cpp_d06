@@ -1,7 +1,7 @@
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef ICE_H_
+# define ICE_H_
 
-# include "AMateria.hpp"
+# include "AMateria.hh"
 
 class Ice : public AMateria
 {

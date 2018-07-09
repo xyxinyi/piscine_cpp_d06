@@ -1,5 +1,5 @@
-#ifndef ICHARACTER_HPP
-# define ICHARACTER_HPP
+#ifndef ICHARACTER_H_
+# define ICHARACTER_H_
 
 # include <string>
 

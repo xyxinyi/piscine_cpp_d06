@@ -1,6 +1,6 @@
-#include "Cure.hpp"
+#include "Cure.hh"
 #include <iostream>
-#include "AMateria.hpp"
+#include "AMateria.hh"
 
 Cure::Cure() :
 	AMateria("cure")

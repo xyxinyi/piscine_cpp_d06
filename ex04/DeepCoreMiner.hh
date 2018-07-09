@@ -1,7 +1,7 @@
-#ifndef DEEPCOREMINER_HPP
-# define DEEPCOREMINER_HPP
+#ifndef DEEPCOREMINER_H_
+# define DEEPCOREMINER_H_
 
-# include "IMiningLaser.hpp"
+# include "IMiningLaser.hh"
 
 class DeepCoreMiner : public IMiningLaser
 {

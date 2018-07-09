@@ -1,4 +1,4 @@
-#include "StripMiner.hpp"
+#include "StripMiner.hh"
 #include <iostream>
 
 StripMiner::StripMiner()

@@ -1,7 +1,7 @@
-#ifndef CHARACTER_HPP
-# define CHARACTER_HPP
+#ifndef CHARACTER_H_
+# define CHARACTER_H_
 
-# include "ICharacter.hpp"
+# include "ICharacter.hh"
 
 class AMateria;
 

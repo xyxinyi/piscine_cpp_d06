@@ -1,5 +1,5 @@
-#include "MateriaSource.hpp"
-#include "AMateria.hpp"
+#include "MateriaSource.hh"
+#include "AMateria.hh"
 
 MateriaSource::MateriaSource()
 {

@@ -1,5 +1,5 @@
-#include "Character.hpp"
-#include "AMateria.hpp"
+#include "Character.hh"
+#include "AMateria.hh"
 
 Character::Character()
 {

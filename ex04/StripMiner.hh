@@ -1,7 +1,7 @@
-#ifndef STRIPMINER_HPP
-# define STRIPMINER_HPP
+#ifndef STRIPMINER_H_
+# define STRIPMINER_H_
 
-# include "IMiningLaser.hpp"
+# include "IMiningLaser.hh"
 
 class StripMiner : public IMiningLaser
 {

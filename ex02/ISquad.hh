@@ -2,12 +2,12 @@
 // Created by Alen BADRAJAN on 7/25/17.
 //
 
-#ifndef EX02_ISQUAD_HPP
-#define EX02_ISQUAD_HPP
+#ifndef EX02_ISQUAD_H_
+#define EX02_ISQUAD_H_
 
 #include <iostream>
 #include <string>
-#include "ISpaceMarine.hpp"
+#include "ISpaceMarine.hh"
 
 
 # define STR std::string
@@ -26,4 +26,4 @@ public:
     virtual int push(ISpaceMarine*) = 0;
 	
 };
-#endif //EX02_ISQUAD_HPP
+#endif 
