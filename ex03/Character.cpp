@@ -1,60 +1,62 @@
-#include "Character.hh"
+#include "Character.hpp"
+
+int Character::index = 0;
+
+Character::Character()
+{
+	this->name = "char";
+	for (int i = 0; i < 4; i++)
+		mater[i] = NULL;
+}
 
 Character::Character(std::string const & name)
-: name(name) {
-	int i;
-	for (i = 0; i < 4; i++) {
-		slots[i] = NULL;
-	}
+{
+	this->name = name;
+	for (int i = 0; i < 4; i++)
+		mater[i] = NULL;
 }
 
-Character::Character(Character const & perso) {
-	name = perso.name;
-	int i;
-	for (i = 0; i < 4; i++) {
-		if (slots[i]) {
-			//delete slots[i];
-		}
-		slots[i] = NULL;
-		if (perso.slots[i]) {
-			slots[i] = perso.slots[i]->clone();
-		}
-	}
+Character::Character(Character & r)
+{
+	this->name = r.getName();
+	for (int i = 0; i < 4; i++)
+		this->mater[i] = r.mater[i];
 }
 
-Character::~Character() {
-	int i;
-	for(i = 0; i < 4; i++) {
-		if (slots[i]) {
-			//delete slots[i];
-		}
-	}
+Character::~Character()
+{
+	for (int i = 0; i <= index; i++)
+		delete mater[i];
+	index = 0;
 }
 
-std::string const & Character::getName() const {
-	return name;
+Character & Character::operator=(Character & r)
+{
+	this->name = r.getName();
+	for (int i = 0; i < 4; i++)
+		this->mater[i] = r.mater[i];
+
+	return *this;
 }
 
-void Character::equip(AMateria* materia) {
-	if (materia) {
-		int i;
-		for(i = 0; i < 4; i++) {
-			if (slots[i] == NULL) {
-				slots[i] = materia;
-				return;
-			}
-		}
-	}
+std::string const & Character::getName() const
+{
+	return this->name;
 }
 
-void Character::unequip(int index) {
-	if (index >= 0 && index < 4) {
-		slots[index] = NULL;
-	}
+void		Character::equip(AMaterial * mat)
+{
+	if (index < 3)
+		mater[index++] = mat;
 }
 
-void Character::use(int index, ICharacter& target) {
-	if (index >= 0 && index < 4 && slots[index] != NULL) {
-		slots[index]->use(target);
-	}
+void		Character::unequip(int ind)
+{
+	if (ind < 3 && ind > 0)
+		this->mater[ind] = NULL;
+}
+
+void		Character::use(int ind, ICharacter & target)
+{
+	this->mater[ind]->use(target);
 }

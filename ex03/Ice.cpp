@@ -1,23 +1,31 @@
-#include "Ice.hh"
+#include "Ice.hpp"
+#include "ICharacter.hpp"
 
-Ice::Ice()
-: AMateria("ice") {
+Ice::Ice() : AMateria("ice")
+{}
 
+Ice::Ice(std::string const & type) : AMateria(type)
+{}
+
+Ice::Ice(Ice & r) : AMateria(r.getType())
+{}
+
+Ice::~Ice() {}
+
+Ice & Ice::operator=(Ice & r) 
+{
+	(void)r;
+
+	return *this;
 }
 
-Ice::Ice(Ice const & ice)
-: AMateria("ice") {
-	this->xp = ice.xp;
+AMateria * Ice::clone() const
+{
+	return new AMateria("ice");
 }
 
-Ice::~Ice() {
-
-}
-
-AMateria * Ice::clone() const {
-	return new Ice(*this);
-}
-
-void Ice::effect(ICharacter & target) {
-	speak(std::string("* shoots an ice bolt at ") + target.getName() + " *");
+void		Ice::use(ICharacter & target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	AMateria::use();
 }
