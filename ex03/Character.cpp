@@ -1,62 +1,89 @@
 #include "Character.hpp"
-
-int Character::index = 0;
+#include "AMateria.hpp"
 
 Character::Character()
 {
-	this->name = "char";
-	for (int i = 0; i < 4; i++)
-		mater[i] = NULL;
+
 }
 
-Character::Character(std::string const & name)
+Character::Character(const std::string& name) :
+	_name(name)
 {
-	this->name = name;
-	for (int i = 0; i < 4; i++)
-		mater[i] = NULL;
-}
-
-Character::Character(Character & r)
-{
-	this->name = r.getName();
-	for (int i = 0; i < 4; i++)
-		this->mater[i] = r.mater[i];
+	this->_mats[0] = 0;
+	this->_mats[1] = 0;
+	this->_mats[2] = 0;
+	this->_mats[3] = 0;
 }
 
 Character::~Character()
 {
-	for (int i = 0; i <= index; i++)
-		delete mater[i];
-	index = 0;
+	this->release();
 }
 
-Character & Character::operator=(Character & r)
+Character::Character(const Character& c) :
+	_name(c._name)
 {
-	this->name = r.getName();
-	for (int i = 0; i < 4; i++)
-		this->mater[i] = r.mater[i];
+	this->_mats[0] = 0;
+	this->_mats[1] = 0;
+	this->_mats[2] = 0;
+	this->_mats[3] = 0;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (c._mats[i])
+			this->_mats[i] = c._mats[i]->clone();
+	}
+}
 
+Character&	Character::operator=(const Character& c)
+{
+	this->release();
+	for (int i = 0; i < 4; ++i)
+	{
+		if (c._mats[i])
+			this->_mats[i] = c._mats[i]->clone();
+	}
 	return *this;
 }
 
-std::string const & Character::getName() const
+void				Character::release()
 {
-	return this->name;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (this->_mats[i])
+			delete this->_mats[i];
+		this->_mats[i] = 0;
+	}
 }
 
-void		Character::equip(AMaterial * mat)
+const std::string&	Character::getName() const
 {
-	if (index < 3)
-		mater[index++] = mat;
+	return this->_name;
 }
 
-void		Character::unequip(int ind)
+void				Character::equip(AMateria *mat)
 {
-	if (ind < 3 && ind > 0)
-		this->mater[ind] = NULL;
+	for (int i = 0; i < 4; ++i)
+	{
+		if (!this->_mats[i])
+		{
+			this->_mats[i] = mat;
+			break ;
+		}
+	}
 }
 
-void		Character::use(int ind, ICharacter & target)
+void				Character::unequip(int index)
 {
-	this->mater[ind]->use(target);
+	if (this->_mats[index])
+	{
+		for (;index < 3; ++index)
+			this->_mats[index + 1] = this->_mats[index];
+		this->_mats[3] = 0;
+	}
+}
+
+void				Character::use(int index, ICharacter& target)
+{
+	if (this->_mats[index])
+		this->_mats[index]->use(target);
 }

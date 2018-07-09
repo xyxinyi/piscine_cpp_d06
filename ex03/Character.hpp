@@ -1,29 +1,30 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
+#ifndef CHARACTER_HPP
+# define CHARACTER_HPP
 
-#include "ICharacter.hpp"
+# include "ICharacter.hpp"
 
-class Character : public ICharacter {
+class AMateria;
 
-public:
-
-	AMateria *mater[4];
-	static	int index;
-
-	std::string	name;
+class Character : public ICharacter
+{
+private:
+	AMateria	*_mats[4];
+	std::string	_name;
 
 	Character();
-	Character(std::string const & name);
-	Character(Character & r);
-	~Character();
 
-	Character & operator=(Character & r);
+	void		release();
 
-	std::string const & getName() const;
-	void equip(AMateria* m);
-	void unequip(int idx);
-	void use(int idx, ICharacter& target);
-	
+public:
+	Character(const std::string& name);
+	virtual		~Character();
+	Character(const Character& c);
+	Character& operator=(const Character& c);
+
+	virtual const std::string&		getName() const;
+	virtual void					equip(AMateria* m);
+	virtual void					unequip(int idx);
+	virtual void					use(int idx, ICharacter& target);
 };
 
 #endif
