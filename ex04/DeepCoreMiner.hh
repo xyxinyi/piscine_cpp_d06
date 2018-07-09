@@ -1,18 +1,13 @@
-#ifndef DEEPCOREMINER_H_
-# define DEEPCOREMINER_H_
+#ifndef DEEPCORE_MINER_HH
+#define DEEPCORE_MINER_HH
 
-# include "IMiningLaser.hh"
+#include <iostream>
+#include "IMiningLaser.hh"
 
-class DeepCoreMiner : public IMiningLaser
-{
-private:
+class DeepCoreMiner : public IMiningLaser{
 public:
-	DeepCoreMiner();
-	virtual ~DeepCoreMiner();
-	DeepCoreMiner(const DeepCoreMiner& dcm);
-	DeepCoreMiner& operator=(const DeepCoreMiner& dcm);
-
-	virtual void		mine(IAsteroid *a);
+  DeepCoreMiner();
+  ~DeepCoreMiner();
+  virtual void mine(IAsteroid *);
 };
-
 #endif
